@@ -7,11 +7,13 @@ namespace Ecp\Output;
 class EcpOutput implements EcpOutputInterface
 {
     private $successMsg;
+    private $errorMsg;
 
 
     public function __construct()
     {
         $this->successMsg = null;
+        $this->errorMsg = null;
     }
 
     public static function create()
@@ -26,6 +28,12 @@ class EcpOutput implements EcpOutputInterface
         return $this;
     }
 
+    public function error($msg)
+    {
+        $this->errorMsg = $msg;
+        return $this;
+    }
+
 
 
     //--------------------------------------------
@@ -34,5 +42,10 @@ class EcpOutput implements EcpOutputInterface
     public function getSuccess()
     {
         return $this->successMsg;
+    }
+
+    public function getError()
+    {
+        return $this->errorMsg;
     }
 }

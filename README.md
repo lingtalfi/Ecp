@@ -271,6 +271,10 @@ Related
 History Log
 ------------------
     
+- 1.3.0 -- 2017-11-21
+
+    - add EcpOutputInterface.getError method
+    
 - 1.2.0 -- 2017-11-21
 
     - removed $$successNotif$$ special code (too risky in terms of confusing the mvc model)
