@@ -48,7 +48,11 @@ It's a json array called output in this section.
 
 Some keys contained in the output have a special meaning:
 
-- $$success$$: your app should display a success notif to the user (the one with the green check mark, you know...)
+- $$success$$: a success message to display to the user
+- $$successNotif$$: an html code to display to the user (for instance, a message with a green check mark).
+                    This is like $$success$$, but leverages the fact that we render the html notification server side.
+                    This might be especially appropriate if your notifications have complex html.
+                    
 - $$error$$: your app should display a public error message (intented for your customers)
 - $$invalid$$: the request you've made was erroneous (invalid parameters send), your app should generally console.log
                 this message for development debug; you could also server-side log it just to be sure 
@@ -264,6 +268,10 @@ Related
 
 History Log
 ------------------
+    
+- 1.1.0 -- 2017-11-21
+
+    - add $$successNotif$$ special code
     
 - 1.0.0 -- 2017-11-20
 
