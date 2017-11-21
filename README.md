@@ -271,6 +271,10 @@ Related
 History Log
 ------------------
     
+- 1.3.1 -- 2017-11-21
+
+    - fix EcpServiceUtil::executeProcess, forgot getError method
+    
 - 1.3.0 -- 2017-11-21
 
     - add EcpOutputInterface.getError method

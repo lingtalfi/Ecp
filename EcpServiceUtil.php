@@ -24,6 +24,8 @@ class EcpServiceUtil
 
                 if (null !== ($successMsg = $ecpOutput->getSuccess())) {
                     $out['$$success$$'] = $successMsg;
+                } elseif (null !== ($errorMsg = $ecpOutput->getError())) {
+                    $out['$$error$$'] = $errorMsg;
                 }
 
             } catch (\Exception $e) {
