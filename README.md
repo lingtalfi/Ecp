@@ -109,6 +109,9 @@ There are multiple approaches to rendering a dynamic template in the front.
 
 Although the choice of a strategy might depend on the type of templates you need to render, intent assumes that
 the third approach (all php) is taken, which by the way is well suited for the most complex templates you can imagine.
+
+Beware though that using this approach tends to blur the limit between the view and the controller (in MVC model),
+so be careful not to abuse it, or do is consciously.
  
 
 
