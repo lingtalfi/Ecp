@@ -58,6 +58,9 @@ Some keys contained in the output have a special meaning:
                 this message for development debug; you could also server-side log it just to be sure 
                     
 
+Note: there can only be one of the above special keys at the time.
+
+
 ### Helpers:
 
 - EcpServiceUtil::executeProcess (in this class, see the How to section)
