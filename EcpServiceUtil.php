@@ -35,7 +35,7 @@ class EcpServiceUtil
                     $out = [
                         '$$invalid$$' => "the $missing argument was not passed",
                     ];
-                    self::onInvalidArgumentAfter($e);
+                    static::onInvalidArgumentAfter($e);
                 } elseif ($e instanceof EcpUserMessageException) {
                     $out = [
                         '$$error$$' => $e->getMessage(),
@@ -44,7 +44,7 @@ class EcpServiceUtil
                     $out = [
                         '$$error$$' => "An unexpected error occurred. It has been logged and we're working on it!",
                     ];
-                    self::onErrorAfter($e);
+                    static::onErrorAfter($e);
 
                 }
             }
