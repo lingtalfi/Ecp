@@ -21,7 +21,7 @@ class EcpServiceUtil
 
             try {
                 $ecpOutput = EcpOutput::create();
-                $out = self::doExecuteProcess($process, $action, $intent, $ecpOutput);
+                $out = static::doExecuteProcess($process, $action, $intent, $ecpOutput);
 
                 if (null !== ($successMsg = $ecpOutput->getSuccess())) {
                     $out['$$success$$'] = $successMsg;

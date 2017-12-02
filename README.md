@@ -271,6 +271,10 @@ Related
 History Log
 ------------------
     
+- 1.4.1 -- 2017-12-02
+
+    - fix EcpServiceUtil::doExecuteProcess called by self instead of static
+    
 - 1.4.0 -- 2017-12-02
 
     - add EcpServiceUtil::doExecuteProcess protected method
