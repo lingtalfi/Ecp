@@ -271,6 +271,10 @@ Related
 History Log
 ------------------
     
+- 1.4.0 -- 2017-12-02
+
+    - add EcpServiceUtil::doExecuteProcess protected method
+    
 - 1.3.1 -- 2017-11-21
 
     - fix EcpServiceUtil::executeProcess, forgot getError method

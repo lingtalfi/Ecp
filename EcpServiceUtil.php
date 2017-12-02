@@ -7,6 +7,7 @@ namespace Ecp;
 use Ecp\Exception\EcpInvalidArgumentException;
 use Ecp\Exception\EcpUserMessageException;
 use Ecp\Output\EcpOutput;
+use Ecp\Output\EcpOutputInterface;
 
 class EcpServiceUtil
 {
@@ -20,7 +21,7 @@ class EcpServiceUtil
 
             try {
                 $ecpOutput = EcpOutput::create();
-                $out = call_user_func($process, $action, $intent, $ecpOutput);
+                $out = self::doExecuteProcess($process, $action, $intent, $ecpOutput);
 
                 if (null !== ($successMsg = $ecpOutput->getSuccess())) {
                     $out['$$success$$'] = $successMsg;
@@ -92,5 +93,10 @@ class EcpServiceUtil
     protected static function onErrorAfter(\Exception $e)
     {
 
+    }
+
+    protected static function doExecuteProcess($process, $action, $intent, EcpOutputInterface $ecpOutput)
+    {
+        return call_user_func($process, $action, $intent, $ecpOutput);
     }
 }
