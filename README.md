@@ -271,6 +271,10 @@ Related
 History Log
 ------------------
     
+- 1.5.0 -- 2018-01-29
+
+    - enhance EcpServiceUtil, add fourth argument (pool) to get method
+    
 - 1.4.1 -- 2017-12-02
 
     - fix EcpServiceUtil::doExecuteProcess called by self instead of static

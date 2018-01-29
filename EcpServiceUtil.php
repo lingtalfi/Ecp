@@ -60,12 +60,14 @@ class EcpServiceUtil
     }
 
 
-    public static function get($key, $throwEx = true, $default = null)
+    public static function get($key, $throwEx = true, $default = null, array $pool = null)
     {
         /**
          * ecp recommends that all params are passed via $_POST, except the action param.
          */
-        $pool = $_POST;
+        if (null === $pool) {
+            $pool = $_POST;
+        }
         if (array_key_exists($key, $pool)) {
             $ret = $pool[$key];
             if ('true' === $ret) {
