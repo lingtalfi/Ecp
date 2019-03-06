@@ -14,7 +14,7 @@ Install
 ==========
 Using the [uni](https://github.com/lingtalfi/universe-naive-importer) command.
 ```bash
-uni import Ecp
+uni import Ling/Ecp
 ```
 
 Or just download it and place it where you want otherwise.
@@ -184,8 +184,8 @@ It's assumed that your app service controller wraps the code below (the $out var
 use Core\Services\Hooks;
 use Module\Ekom\Api\EkomApi;
 use Module\Ekom\Api\Layer\ProductBoxLayer;
-use Ecp\EcpServiceUtil;
-use Ecp\Output\EcpOutputInterface;
+use Ling\Ecp\EcpServiceUtil;
+use Ling\Ecp\Output\EcpOutputInterface;
 
 
 $out = EcpServiceUtil::executeProcess(function ($action, $intent, EcpOutputInterface $output) {

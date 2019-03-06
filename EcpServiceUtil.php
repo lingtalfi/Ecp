@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Ecp;
+namespace Ling\Ecp;
 
 
-use Ecp\Exception\EcpInvalidArgumentException;
-use Ecp\Exception\EcpUserMessageException;
-use Ecp\Output\EcpOutput;
-use Ecp\Output\EcpOutputInterface;
+use Ling\Ecp\Exception\EcpInvalidArgumentException;
+use Ling\Ecp\Exception\EcpUserMessageException;
+use Ling\Ecp\Output\EcpOutput;
+use Ling\Ecp\Output\EcpOutputInterface;
 
 class EcpServiceUtil
 {

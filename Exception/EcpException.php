@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ecp\Exception;
+namespace Ling\Ecp\Exception;
 
 
 class EcpException extends \Exception

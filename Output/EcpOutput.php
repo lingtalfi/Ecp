@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Ecp\Output;
+namespace Ling\Ecp\Output;
 
 
 class EcpOutput implements EcpOutputInterface
